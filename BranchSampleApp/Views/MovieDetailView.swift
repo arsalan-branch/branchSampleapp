@@ -55,15 +55,17 @@ struct MovieDetailView: View {
                                     buo.title = "\(movies.movies[index].title)"
                                     buo.contentDescription = "\(movies.movies[index].description)"
                                     buo.imageUrl = "\(movies.movies[index].coverImage)"
+                                   
                                     lp.channel = "twitter"
                                     lp.feature = "linkcreation"
                                     lp.campaign = "sdklinks"
+                                    
                                     lp.addControlParam("$og_title", withValue: "\(movies.movies[index].title)")
                                     lp.addControlParam("$og_description", withValue: "\(movies.movies[index].description)")
                                     lp.addControlParam("$og_image_url", withValue: "https://img.freepik.com/free-vector/cinema-realistic-poster-with-illuminated-bucket-popcorn-drink-3d-glasses-reel-tickets-blue-background-with-tapes-vector-illustration_1284-77070.jpg?w=1800&t=st=1710269465~exp=1710270065~hmac=7ada7564ca432b5bfaba2ca66417e86951b5d7233b820b103feb6668e62d0158")
                                     //lp.addControlParam("$desktop_url", withValue: "https://bookdle.vercel.app/")
                                     //lp.addControlParam("$ios_url", withValue: "https://bookdle.vercel.app/")
-                                    //lp.addControlParam("$android_url", withValue: "https://bookdle.vercel.app/")
+                                    //lp.addControlParam("$fallback_url", withValue: "https://bookdle.vercel.app/")
                                     lp.addControlParam("$match_duration", withValue: "300")
                                     lp.addControlParam("nav_to", withValue: "movieDetail")
                                     lp.addControlParam("nav_id", withValue: "\(movies.movies[index].id)")
@@ -192,9 +194,10 @@ struct MovieDetailView: View {
                                 movies.movies[index].isRent = true
                                 
                                 let event = BranchEvent.standardEvent(.purchase)
-
+                            
                                 // Add the BranchUniversalObject with the content (do not add an empty branchUniversalObject):
                                 event.contentItems     = [ buo ]
+                            
 
                                 // Add relevant event data:
                                 event.alias            = "\(movies.movies[index].title)"
@@ -225,6 +228,7 @@ struct MovieDetailView: View {
             let event = BranchEvent.standardEvent(.viewItem)
             event.alias = "\(movies.movies[index].title)"
             event.eventDescription = "Viewed Movie -  \(movies.movies[index].title)"
+            
             event.customData["genre"] = "\(movies.movies[index].genre)"
             event.logEvent()
         }

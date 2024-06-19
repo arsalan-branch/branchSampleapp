@@ -15,6 +15,27 @@ struct MovieListView: View {
             GridItem(.flexible()),
             GridItem(.flexible()),
         ]
+    
+    func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Test Notification"
+        content.body = "This is a test notification."
+        content.sound = UNNotificationSound.default
+        content.userInfo = ["branch": "https://moviemania.app.link/Nx8HPpzNRIb"]
+        // Trigger the notification in 5 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // Create a request with a unique identifier
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        // Add the request to the notification center
+        UNUserNotificationCenter.current().add(request) { error in
+          if let error = error {
+            print("Error scheduling notification: \(error)")
+          } else {
+            print("Notification scheduled")
+          }
+        }
+      }
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -24,7 +45,8 @@ struct MovieListView: View {
                         .padding(.vertical, 10)
                         .padding(.horizontal, 15)
                         .onTapGesture {
-                            coordinator.push(view: MovieDetailView(id: item.id).environmentObject(movies))
+                           //scheduleNotification()
+                           coordinator.push(view: MovieDetailView(id: item.id).environmentObject(movies))
                         }
                     }
                 }
@@ -34,11 +56,11 @@ struct MovieListView: View {
             .navigationTitle("Movies")
             .onAppear{
                 //Tracking Content Event
-                let event = BranchEvent.standardEvent(.viewItems)
+//                let event = BranchEvent.standardEvent(.viewItems)
 //                event.alias = "\(movies.movies[index].title)"
 //                event.eventDescription = "Viewed Movie -  \(movies.movies[index].title)"
 //                event.customData["genre"] = "\(movies.movies[index].genre)"
-                event.logEvent()
+//                event.logEvent()
             }
         }
     }
