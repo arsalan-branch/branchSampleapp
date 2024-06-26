@@ -194,11 +194,8 @@ struct MovieDetailView: View {
                                 movies.movies[index].isRent = true
                                 
                                 let event = BranchEvent.standardEvent(.purchase)
-                            
                                 // Add the BranchUniversalObject with the content (do not add an empty branchUniversalObject):
                                 event.contentItems     = [ buo ]
-                            
-
                                 // Add relevant event data:
                                 event.alias            = "\(movies.movies[index].title)"
                                 event.transactionID    = "12344555"
