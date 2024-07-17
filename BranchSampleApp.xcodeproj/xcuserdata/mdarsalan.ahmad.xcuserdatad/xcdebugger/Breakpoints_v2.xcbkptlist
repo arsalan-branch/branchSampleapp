@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D73EB974-85EB-4758-8E12-6E6C2A22FA9D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE797A6D-0ECB-4D34-9E9C-4E9CE0991A8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BranchSampleApp/Views/MovieListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MovieListView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "DE797A6D-0ECB-4D34-9E9C-4E9CE0991A8C - fe3da5fc39d83617"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BranchSampleApp.MovieListView.init() -&gt; BranchSampleApp.MovieListView"
+                  moduleName = "BranchSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mdarsalan.ahmad/Documents/GitHub/branchSampleapp/BranchSampleApp/Views/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "DE797A6D-0ECB-4D34-9E9C-4E9CE0991A8C - 998bbb45297a23c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BranchSampleApp.MovieListView.init(movies: SwiftUI.EnvironmentObject&lt;BranchSampleApp.MovieViewModel&gt;, coordinator: SwiftUI.EnvironmentObject&lt;BranchSampleApp.AppCoordinator&gt;) -&gt; BranchSampleApp.MovieListView"
+                  moduleName = "BranchSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mdarsalan.ahmad/Documents/GitHub/branchSampleapp/BranchSampleApp/Views/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "DE797A6D-0ECB-4D34-9E9C-4E9CE0991A8C - fe3da5fc39d83655"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BranchSampleApp.MovieListView.init() -&gt; BranchSampleApp.MovieListView"
+                  moduleName = "BranchSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mdarsalan.ahmad/Documents/GitHub/branchSampleapp/BranchSampleApp/Views/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "DE797A6D-0ECB-4D34-9E9C-4E9CE0991A8C - 998bbb45297a23c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BranchSampleApp.MovieListView.init(movies: SwiftUI.EnvironmentObject&lt;BranchSampleApp.MovieViewModel&gt;, coordinator: SwiftUI.EnvironmentObject&lt;BranchSampleApp.AppCoordinator&gt;) -&gt; BranchSampleApp.MovieListView"
+                  moduleName = "BranchSampleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mdarsalan.ahmad/Documents/GitHub/branchSampleapp/BranchSampleApp/Views/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D901F90F-4C3E-48F6-8E78-2B01F8715275"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BranchSampleApp/Lifecycle/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA4F144B-9401-4CFB-A898-AB678F9C582C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BranchSampleApp/Lifecycle/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "application(_:open:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
