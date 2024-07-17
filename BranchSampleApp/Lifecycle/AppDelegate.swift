@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BranchSampleApp
 //
-//  Created by Yashwanthi Manchala on 21/01/24.
+//  Created by Yashwanthi Manchala and Guru
 //
 
 import UIKit
@@ -33,6 +33,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
+        
         Branch.enableLogging()
         Branch.setTrackingDisabled(true)
         
@@ -40,20 +41,20 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
             initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
         }else{
             let alert = UIAlertController(title: "Tracking", message: "Do you want to allow tracking", preferredStyle: .alert)
-
+            
             let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
                 Branch.setTrackingDisabled(false)
                 self.initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
             })
-
+            
             let actionCancel = UIAlertAction(title: "No", style: .destructive, handler: { action in
                 Branch.setTrackingDisabled(true)
                 self.initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
             })
-
+            
             alert.addAction(actionYes)
             alert.addAction(actionCancel)
-
+            
             DispatchQueue.main.async {
                 self.window?.rootViewController?.present(alert, animated: true, completion: nil)
             }
@@ -83,16 +84,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
     }
     
     
-
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-          // Handler for Universal Links
+        // Handler for Universal Links
         Branch.getInstance().continue(userActivity)
         return true
-    }
-//Remote notification
-    
- func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-      // Handler for Push Notifications
-     Branch.getInstance().handlePushNotification(userInfo)
     }
 }
