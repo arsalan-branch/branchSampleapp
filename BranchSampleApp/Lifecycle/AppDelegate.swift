@@ -22,6 +22,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
     }()
     
     var firstOpen = true
+    var concentHandled = false
+    
+    override init() { super.init() // Set a default value if it's not already set
+        if UserDefaultsHelper.shared.concentHandled == nil {
+            UserDefaultsHelper.shared.concentHandled = false
+        } }
     
     func application(
         _ application: UIApplication,
@@ -32,24 +38,41 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: "firstOpen") == nil {
+            // Set the value only if it is not already set
+            defaults.set(true, forKey: "firstOpen")
+            defaults.synchronize()
+            // Ensure the value is saved immediately
+        }
+        
+        
         
         
         Branch.enableLogging()
-        Branch.setTrackingDisabled(true)
+        //Branch.setTrackingDisabled(true)
         
-        if !firstOpen {
+        if !defaults.bool(forKey: "firstOpen") {
             initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
         }else{
             let alert = UIAlertController(title: "Tracking", message: "Do you want to allow tracking", preferredStyle: .alert)
             
             let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
                 Branch.setTrackingDisabled(false)
+                UserDefaultsHelper.shared.concentHandled = true
+                defaults.synchronize()
                 self.initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
+                defaults.set(false, forKey: "firstOpen")
+                defaults.synchronize()
             })
             
             let actionCancel = UIAlertAction(title: "No", style: .destructive, handler: { action in
                 Branch.setTrackingDisabled(true)
+                UserDefaultsHelper.shared.concentHandled = true
+
                 self.initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
+                defaults.set(false, forKey: "firstOpen")
+                defaults.synchronize()
             })
             
             alert.addAction(actionYes)
@@ -87,7 +110,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         // Handler for Universal Links
-        Branch.getInstance().continue(userActivity)
+        if UserDefaultsHelper.shared.concentHandled ?? false{
+            Branch.getInstance().continue(userActivity)
+        }
         return true
     }
 }

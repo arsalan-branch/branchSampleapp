@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6ADCE3B02C4965CB007E6265 /* HelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADCE3AF2C4965CB007E6265 /* HelperClass.swift */; };
 		D6500CA42B5CD8CC0012059E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6500CA32B5CD8CC0012059E /* ContentView.swift */; };
 		D6500CA62B5CD8CD0012059E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6500CA52B5CD8CD0012059E /* Assets.xcassets */; };
 		D6500CA92B5CD8CD0012059E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6500CA82B5CD8CD0012059E /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6ADCE3AF2C4965CB007E6265 /* HelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperClass.swift; sourceTree = "<group>"; };
 		D6500C9E2B5CD8CC0012059E /* BranchSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BranchSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6500CA32B5CD8CC0012059E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6500CA52B5CD8CD0012059E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				D6500CCB2B5D862B0012059E /* AppDelegate.swift */,
+				6ADCE3AF2C4965CB007E6265 /* HelperClass.swift */,
 			);
 			path = Lifecycle;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				D6500CD42B5DAFC80012059E /* CreateLinks.swift in Sources */,
 				D6500CC72B5D26BA0012059E /* RectangularButton.swift in Sources */,
 				D6500CB22B5CFD090012059E /* MovieDetailView.swift in Sources */,
+				6ADCE3B02C4965CB007E6265 /* HelperClass.swift in Sources */,
 				D6500CB02B5CFCF30012059E /* MovieListView.swift in Sources */,
 				D6500CBA2B5D00440012059E /* StretchyView.swift in Sources */,
 				D6500CC22B5D00B70012059E /* MovieViewModel.swift in Sources */,
