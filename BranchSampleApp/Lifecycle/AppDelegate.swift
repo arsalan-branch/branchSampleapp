@@ -48,7 +48,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         
         
         
-        
+        Branch.setUseTestBranchKey(true)
         Branch.enableLogging()
         //Branch.setTrackingDisabled(true)
         
