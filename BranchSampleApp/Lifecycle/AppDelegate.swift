@@ -50,7 +50,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         
         Branch.setUseTestBranchKey(true)
         Branch.enableLogging()
-        //Branch.setTrackingDisabled(true)
+            
         
         if !defaults.bool(forKey: "firstOpen") {
             initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
@@ -58,7 +58,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
             let alert = UIAlertController(title: "Tracking", message: "Do you want to allow tracking", preferredStyle: .alert)
             
             let actionYes = UIAlertAction(title: "Yes", style: .default, handler: { action in
-                Branch.setTrackingDisabled(false)
+                //Branch.setTrackingDisabled(false)
                 UserDefaultsHelper.shared.concentHandled = true
                 defaults.synchronize()
                 self.initaliseBranch(didFinishLaunchingWithOptions: launchOptions)
