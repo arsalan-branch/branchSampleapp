@@ -4,8 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:oufk3.app.link</string>
-		<string>applinks:oufk3-alternate.app.link</string>
+		<string>applinks:moviemania.test-app.link</string>
+		<string>applinks:moviemania-alternate.test-app.link</string>
 		<string>applinks:moviemania.app.link</string>
 		<string>applinks:moviemania-alternate.app.link</string>
 	</array>

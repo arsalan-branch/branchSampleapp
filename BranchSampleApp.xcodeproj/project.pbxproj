@@ -383,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BranchSampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 8GF7CB6XP8;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BranchSampleApp/Info.plist;
@@ -396,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.BranchSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.BranchSampleApp.GDPR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -413,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BranchSampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 8GF7CB6XP8;
+				DEVELOPMENT_TEAM = R63EM248DP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BranchSampleApp/Info.plist;
@@ -426,7 +426,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.BranchSampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = test.BranchSampleApp.GDPR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -463,7 +463,7 @@
 			repositoryURL = "https://github.com/BranchMetrics/ios-branch-sdk-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 3.4.3;
+				version = 3.4.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

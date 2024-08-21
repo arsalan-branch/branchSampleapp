@@ -17,11 +17,13 @@
 	<dict>
 		<key>live</key>
 		<string>key_live_gqhyVYRYj3zcDE2jKrBcNaggxFj951GB</string>
+		<key>test</key>
+		<string>key_test_dvmrO7R9e7CpyyXdSxzlKkonExg08ZLN</string>
 	</dict>
 	<key>branch_universal_link_domains</key>
 	<array>
-		<string>oufk3.app.link</string>
-		<string>oufk3-alternate.app.link</string>
+		<string>moviemania.test-app.link</string>
+		<string>moviemania-alternate.test-app.link</string>
 		<string>moviemania.app.link</string>
 		<string>moviemania-alternate.app.link</string>
 	</array>

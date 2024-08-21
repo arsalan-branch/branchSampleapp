@@ -33,6 +33,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationC
         
         
         Branch.enableLogging()
+        Branch.setUseTestBranchKey(true)
         
         Branch.getInstance().checkPasteboardOnInstall()
         
